@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APP", "APP", "{C354D4EC-A072-4F45-80EC-ECEDF4F896AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{70645187-3F93-49E6-ADFB-3660424282B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{F3F135AE-BC41-427A-B79E-C4704F381A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Entitites", "Clinic.Entitites\Clinic.Entitites.csproj", "{206FD6FF-2F1B-406B-B77F-4624FC1D13F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9F287E9B-B61B-4D27-97CD-20B1CF891316}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Management.Core", "Management.Core\Management.Core.csproj", "{1B9898EE-CDC9-484E-84A3-5048C66EBBAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clinic.Mysql.Entitites", "Clinic.Mysql.Entitites\Clinic.Mysql.Entitites.csproj", "{7E006BBF-28DD-4D2A-9D4B-5704D19AB95C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{206FD6FF-2F1B-406B-B77F-4624FC1D13F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{206FD6FF-2F1B-406B-B77F-4624FC1D13F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{206FD6FF-2F1B-406B-B77F-4624FC1D13F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{206FD6FF-2F1B-406B-B77F-4624FC1D13F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9898EE-CDC9-484E-84A3-5048C66EBBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9898EE-CDC9-484E-84A3-5048C66EBBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9898EE-CDC9-484E-84A3-5048C66EBBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9898EE-CDC9-484E-84A3-5048C66EBBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E006BBF-28DD-4D2A-9D4B-5704D19AB95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E006BBF-28DD-4D2A-9D4B-5704D19AB95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E006BBF-28DD-4D2A-9D4B-5704D19AB95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E006BBF-28DD-4D2A-9D4B-5704D19AB95C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{206FD6FF-2F1B-406B-B77F-4624FC1D13F5} = {70645187-3F93-49E6-ADFB-3660424282B5}
+		{1B9898EE-CDC9-484E-84A3-5048C66EBBAA} = {9F287E9B-B61B-4D27-97CD-20B1CF891316}
+		{7E006BBF-28DD-4D2A-9D4B-5704D19AB95C} = {F3F135AE-BC41-427A-B79E-C4704F381A9F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B030C238-B09B-4AED-847E-708ED4FE31C9}
+	EndGlobalSection
+EndGlobal
