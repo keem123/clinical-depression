@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Clinic.Entitites;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Clinic.Mysql.Entitites
 {
-    class DapperMysqlAccount
+    public class DapperMysqlAccount : Account
     {
+
     }
 }

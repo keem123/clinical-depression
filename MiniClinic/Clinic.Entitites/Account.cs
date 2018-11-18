@@ -6,7 +6,7 @@ namespace Clinic.Entitites
 {
     public enum AccountType
     {
-        Administrator = 2048,
+        Administrator = 101,
         Regular = 100,
         None = 0,
     }
@@ -18,8 +18,8 @@ namespace Clinic.Entitites
     }
     public class Account : EntityBase
     {
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public string Username { get; set; } = null;
+        public string Password { get; set; } = null;
         public AccountType Type { get; set; } = AccountType.None;
         public AccountStatus Status { get; set; } = AccountStatus.None;
     }
