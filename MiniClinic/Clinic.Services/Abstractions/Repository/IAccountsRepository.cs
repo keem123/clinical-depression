@@ -9,7 +9,8 @@ namespace Clinic.Services
 {
     public interface IAccountsRepository : IRepository
     {
-        Task<(Account, bool)> Login(string Username, string Password);
+        Task<IEnumerable<Account>> GetAccounts();
+        Task<(Account, (bool,string))> Login(string Username, string Password);
         Task<bool> CreateAccount(Account account);
         Task<bool> ModifyAccount(Account account);
         Task<bool> RemoveAccount(Account account);

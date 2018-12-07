@@ -8,6 +8,7 @@ namespace Clinic.Entitites
     {
         Administrator = 101,
         Regular = 100,
+        Guest = 102,
         None = 0,
     }
     public enum AccountStatus
@@ -21,6 +22,6 @@ namespace Clinic.Entitites
         public string Username { get; set; } = null;
         public string Password { get; set; } = null;
         public AccountType Type { get; set; } = AccountType.None;
-        public AccountStatus Status { get; set; } = AccountStatus.None;
+        public AccountStatus AccountStatus { get; set; } = AccountStatus.None;
     }
 }

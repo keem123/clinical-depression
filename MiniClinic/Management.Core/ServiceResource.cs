@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Management.Core
 {
-    public interface IServiceResource
+    public interface IServiceResource<TDataConnection>
     {
         T ResolveRepository<T>(bool IsTransient = true) where T : IRepository;
         void RegisterRepository<T>(T Repository) where T : IRepository;
     }
-    public class ServiceResource<TDataConnection> : IServiceResource
+    public class ServiceResource<TDataConnection> : IServiceResource<TDataConnection>
     {
         protected readonly TDataConnection DataConnection;
 
@@ -21,6 +21,12 @@ namespace Management.Core
             DataConnection = dataConnection;
         }
 
+        public void AddMember<TRepoBase,TRepoConcrete>()
+            where TRepoBase : IRepository
+        {
+            Repositories.Add(typeof(TRepoBase).Name, typeof(TRepoConcrete));
+        }
+        
         public void RegisterRepository<T>(T Repository) where T : IRepository
         {
             Repositories.Add(typeof(T).Name, typeof(T));
