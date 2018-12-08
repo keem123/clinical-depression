@@ -1,4 +1,5 @@
 ﻿using Clinic.Entitites;
+using Management.Core;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Clinic.Services
 {
-    public interface IAccountsService
+    public interface IAccountsService : IService
     {
         Task<IEnumerable<Account>> GetAccounts();
         Task<(Account, (bool,string))> Login(string Username, string Password);

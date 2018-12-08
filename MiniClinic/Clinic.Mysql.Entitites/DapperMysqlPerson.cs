@@ -9,6 +9,11 @@ namespace Clinic.Mysql.Entitites
     [Table("Person")]
     public class DapperMysqlPerson : Person
     {
+        public int CategoryId { get; set; }
+
+        [Computed]
+        public override PersonCategory Category { get; set; }
+
         public DapperMysqlPerson() { }
         public DapperMysqlPerson(Person person)
         {

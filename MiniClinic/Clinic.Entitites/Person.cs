@@ -10,6 +10,7 @@ namespace Clinic.Entitites
         Male = 1,
         Female = 2,
     }
+
     public class Person : EntityBase
     {
         public string FirstName { get; set; } = null;
@@ -18,5 +19,6 @@ namespace Clinic.Entitites
         public string Suffix { get; set; } = null;
         public PersonGender Gender { get; set; } = PersonGender.NotDefined;
         public DateTime BirthDate { get; set; }
+        public virtual PersonCategory Category { get; set; } = null;
     }
 }

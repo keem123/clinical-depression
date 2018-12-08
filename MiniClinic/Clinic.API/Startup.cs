@@ -31,10 +31,12 @@ namespace Clinic.API
 
             var factory = new MysqlRepositoryFactory("server=localhost;database=healthcenter_db;username=root;password=admin;sslmode=none;port=3306;AllowPublicKeyRetrieval=true;");
             factory.AddMember<IAccountsRepository,AccountRepository>();
+            factory.AddMember<IPersonRepository, PersonRepository>();
 
 
             services.AddTransient(typeof(IServiceResource<string>), x => factory);
             services.AddTransient<IAccountsService, AccountService<string>>();
+            services.AddTransient<IPersonService, PersonService<string>>();
 
             ////swagger 
             services.AddSwaggerGen(s =>
