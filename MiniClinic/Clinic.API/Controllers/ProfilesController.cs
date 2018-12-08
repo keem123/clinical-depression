@@ -33,6 +33,19 @@ namespace Clinic.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet("GetCategories")]
+        public async Task<IActionResult> GetPersonCategories()
+        {
+            try
+            {
+                var data = await PersonService.GetPersonCategories();
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
         [HttpPost("CreateProfile")]
         public async Task<IActionResult> CreateProfile([FromBody]Person person)
@@ -43,6 +56,32 @@ namespace Clinic.API.Controllers
                 return Ok(data);
             }
             catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPut("ModifyProfile")]
+        public async Task<IActionResult> ModifyProfile([FromBody]Person person)
+        {
+            try
+            {
+                var data = await PersonService.ModifyProfile(person);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpDelete("RemoveProfile")]
+        public async Task<IActionResult> RemoveProfile([FromBody]Person person)
+        {
+            try
+            {
+                var data = await PersonService.RemoveProfile(person);
+                return Ok(data);
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
