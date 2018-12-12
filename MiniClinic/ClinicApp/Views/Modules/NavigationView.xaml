@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="ClinicApp.Views.Modules.NavigationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClinicApp.Views.Modules"
+             mc:Ignorable="d" 
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+   
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Background="#263238">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <StackPanel TextElement.FontWeight="DemiBold">
+                    <Border  cal:Message.Attach=" [Event PreviewMouseDown] = [Action ViewAccounts]"
+                             VerticalAlignment="Center">
+                        <Border.Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsAccountsSelected}" Value="true">
+                                        <Setter Property="Background" Value="#455A64"/>
+                                        <Setter Property="BorderBrush" Value="DarkOrange"/>
+                                        <Setter Property="BorderThickness" Value="04 0 0 0"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsAccountsSelected}" Value="false">
+                                        <Setter Property="Background" Value="#37474F"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        
+                        <TextBlock  Foreground="#212121" Padding="10" TextAlignment="Center" Text="Accounts"/>
+                    </Border>
+                    <Border  cal:Message.Attach=" [Event PreviewMouseDown] = [Action ViewRecords]"  VerticalAlignment="Center">
+                        <Border.Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsRecordsSelected}" Value="true">
+                                        <Setter Property="Background" Value="#455A64"/>
+                                        <Setter Property="BorderBrush" Value="DarkOrange"/>
+                                        <Setter Property="BorderThickness" Value="04 0 0 0"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsRecordsSelected}" Value="false">
+                                        <Setter Property="Background" Value="#37474F"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <TextBlock  Foreground="#212121" Padding="10" TextAlignment="Center" Text="Records"/>
+                    </Border>
+                    <Border  cal:Message.Attach=" [Event PreviewMouseDown] = [Action ViewEvents]" VerticalAlignment="Center">
+                        <Border.Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsEventsSelected}" Value="true">
+                                        <Setter Property="Background" Value="#455A64"/>
+                                        <Setter Property="BorderBrush" Value="DarkOrange"/>
+                                        <Setter Property="BorderThickness" Value="04 0 0 0"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsEventsSelected}" Value="false">
+                                        <Setter Property="Background" Value="#37474F"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <TextBlock  Foreground="#212121" Padding="10" TextAlignment="Center" Text="Events"/>
+                    </Border>
+                    <Border  cal:Message.Attach=" [Event PreviewMouseDown] = [Action ViewReports]" VerticalAlignment="Center">
+                        <Border.Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding IsReportsSelected}" Value="true">
+                                        <Setter Property="Background" Value="#455A64"/>
+                                        <Setter Property="BorderBrush" Value="DarkOrange"/>
+                                        <Setter Property="BorderThickness" Value="04 0 0 0"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding IsReportsSelected}" Value="false">
+                                        <Setter Property="Background" Value="#37474F"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <TextBlock  Foreground="#212121" Padding="10" TextAlignment="Center" Text="Reports"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+            <Border Grid.Row="2" Background="#FF5252" VerticalAlignment="Center">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <fa:ImageAwesome Foreground="#212121" Icon="Lock" Height="15"/>
+                    <TextBlock FontWeight="DemiBold" Foreground="#212121" Padding="10" TextAlignment="Center" Text="Logout"/>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Grid>
+</UserControl>
