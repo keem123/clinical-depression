@@ -29,7 +29,12 @@ namespace Clinic.API
         {
             services.AddMvc();
 
-            var factory = new MysqlRepositoryFactory("server=localhost;database=healthcenter_db;username=root;password=admin;sslmode=none;port=3306;AllowPublicKeyRetrieval=true;");
+            var mainConstring = Configuration.GetSection("Logging:ConnectionString:default");
+            var constring = mainConstring.Value;
+
+
+
+            var factory = new MysqlRepositoryFactory(constring);
             factory.AddMember<IAccountsRepository,AccountRepository>();
             factory.AddMember<IPersonRepository, PersonRepository>();
 
